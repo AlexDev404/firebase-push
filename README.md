@@ -12,6 +12,9 @@ The backend is written using [loopback 4](https://loopback.io) and uses [firebas
 It contains two routes and runs on port `3000`.
 These routes are `/messages` and `/subscribe`.
 
+> You can test these calls out by installing [Insomnia](https://github.com/Kong/insomnia/releases/tag/core%402023.5.8) and importing the [request archive](https://github.com/AlexDev404/loopback-FCM-subscribe/blob/main/Insomnia_2023-12-14.json).
+
+
 Examples for each respective route are shown below
 
 ```json
