@@ -29,7 +29,7 @@ When sending mesages, the ID of the topic is stored into the `userGroup`->`id` c
 ## Messages Table
 
 | id | userGroup | title | content | createdAt | updatedAt |
-| == | == | == | == | == | == |
+| -- | -- | -- | -- | -- | -- |
 | 1  | 0  | Test Notification | Test | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
 | 2  | 0  | Test Notification 1 | Test | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
 | 3  | 0  | Test Notification 2 | Test | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
@@ -37,7 +37,7 @@ When sending mesages, the ID of the topic is stored into the `userGroup`->`id` c
 ## Topics Table
 
 | id | name | createdAt | updatedAt |
-| == | == | == | == |
+| -- | -- | -- | -- |
 | 1  | default | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
 | 2  | Test1 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
 | 3  | Test2 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
@@ -54,12 +54,12 @@ POST /subscribe
 When subscribing to a channel/topic, the ID of the topic that the user is subscribing to is stored into the `subscriptions`->`topic` column. This corresponds to the ID of the topic in the `topics` table. Here is an example of how this is represented...
 
 | id | user | topic | createdAt | updatedAt |
-| == | == | == | == | == |
-| 1  | eYdOrEfNArzI3o8zpYEjCr:APA91bFaRNfw5mf8cKQpt7dUrBCWhCJBhoSlsbWAs1qMssfjMmMySx-Uw51YWxgbORCSm8lgw8w5OdKIh44C3xjQMfufOQYBSThEMSiBn92Y1eOECE0scMnt1bG6wj8hN4AzY76LMWJR  | 5 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
-| 2  | df95D1UcevNczYMTN8ZSvx:APA91bHUtv1XNUI4TUbCD7odvhdhkV6GoVFnXqp9AgDo3qWlfIyxtBA8_0JWwGm7yz4D2ccmtePEyjCa2LbrbfSBVvZKTbdbADXt3DJ0sDlip57Zp2yNPqcfPM4Vv6JnaqBhk1m9k-tX  | 3 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
-| 3  | eYdOrEfNArzI3o8zpYEjCr:APA91bFaRNfw5mf8cKQpt7dUrBCWhCJBhoSlsbWAs1qMssfjMmMySx-Uw51YWxgbORCSm8lgw8w5OdKIh44C3xjQMfufOQYBSThEMSiBn92Y1eOECE0scMnt1bG6wj8hN4AzY76LMWJR  | 1 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
-| 4  | eYdOrEfNArzI3o8zpYEjCr:APA91bFaRNfw5mf8cKQpt7dUrBCWhCJBhoSlsbWAs1qMssfjMmMySx-Uw51YWxgbORCSm8lgw8w5OdKIh44C3xjQMfufOQYBSThEMSiBn92Y1eOECE0scMnt1bG6wj8hN4AzY76LMWJR  | 2 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
-| 5  | eYdOrEfNArzI3o8zpYEjCr:APA91bFaRNfw5mf8cKQpt7dUrBCWhCJBhoSlsbWAs1qMssfjMmMySx-Uw51YWxgbORCSm8lgw8w5OdKIh44C3xjQMfufOQYBSThEMSiBn92Y1eOECE0scMnt1bG6wj8hN4AzY76LMWJR  |4 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00 |
+| -- | -- | -- | -- | -- |
+| 1  | eYdOrEfNArzI3o8zpYEjCr:APA91bFaRNfw5mf8cKQpt7dUrBCWhCJBhoSlsbWAs1qMssfjMmMySx-Uw51YWxgbORCSm8lgw8w5OdKIh44C3xjQMfufOQYBSThEMSiBn92Y1eOECE0scMnt1bG6wj8hN4AzY76LMWJR  | 5 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00
+| 2  | df95D1UcevNczYMTN8ZSvx:APA91bHUtv1XNUI4TUbCD7odvhdhkV6GoVFnXqp9AgDo3qWlfIyxtBA8_0JWwGm7yz4D2ccmtePEyjCa2LbrbfSBVvZKTbdbADXt3DJ0sDlip57Zp2yNPqcfPM4Vv6JnaqBhk1m9k-tX  | 3 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00
+| 3  | eYdOrEfNArzI3o8zpYEjCr:APA91bFaRNfw5mf8cKQpt7dUrBCWhCJBhoSlsbWAs1qMssfjMmMySx-Uw51YWxgbORCSm8lgw8w5OdKIh44C3xjQMfufOQYBSThEMSiBn92Y1eOECE0scMnt1bG6wj8hN4AzY76LMWJR  | 1 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00
+| 4  | eYdOrEfNArzI3o8zpYEjCr:APA91bFaRNfw5mf8cKQpt7dUrBCWhCJBhoSlsbWAs1qMssfjMmMySx-Uw51YWxgbORCSm8lgw8w5OdKIh44C3xjQMfufOQYBSThEMSiBn92Y1eOECE0scMnt1bG6wj8hN4AzY76LMWJR  | 2 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00
+| 5  | eYdOrEfNArzI3o8zpYEjCr:APA91bFaRNfw5mf8cKQpt7dUrBCWhCJBhoSlsbWAs1qMssfjMmMySx-Uw51YWxgbORCSm8lgw8w5OdKIh44C3xjQMfufOQYBSThEMSiBn92Y1eOECE0scMnt1bG6wj8hN4AzY76LMWJR  |4 | 2023-12-14 21:40:33.340 +00:00 | 2023-12-14 21:40:33.340 +00:00
 
 ## Setup Instructions
 
