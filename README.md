@@ -3,6 +3,7 @@
 ## Project Description
 
 This project is designed to provide a simple proof-of-concept for FCM.
+This project is a simple 'frontend' for [AlexDev404/loopback-FCM-subscribe](https://github.com/AlexDev404/loopback-FCM-subscribe)
 
 ## Setup Instructions
 
