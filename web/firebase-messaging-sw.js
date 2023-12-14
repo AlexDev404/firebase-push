@@ -7,6 +7,7 @@ importScripts(
 );
 
 const firebaseConfig = {
+  // Firebase configuration object
   apiKey: "AIzaSyDJWYR522sr-NEVVUvnAtXbtids2O2KLd0",
   authDomain: "ub-loopback.firebaseapp.com",
   projectId: "ub-loopback",
@@ -15,8 +16,31 @@ const firebaseConfig = {
   appId: "1:831992174946:web:bd0f1963acaca24c0ff43b",
   measurementId: "G-MXP4BEY67C",
 };
-
+// Initialize Firebase with the provided configuration
 firebase.initializeApp(firebaseConfig);
+
+// Handle background messages
+self.addEventListener("push", function (event) {
+  console.log(
+    "[firebase-messaging-sw.js] Received background message ",
+    event.data.json()
+  );
+
+  // Extract notification details from the received data
+  const push = event.data.json().notification;
+  const title = push.title;
+  const notificationOptions = {
+    body: push.body,
+    icon:
+      push.icon ??
+      "https://www.gstatic.com/devrel-devsite/prod/v4c72fb03a7a581549fb317877b3b0627265bda97bd9ba2a29365d1ada8a00354/firebase/images/favicon.png",
+  };
+
+  // Show the notification
+  event.waitUntil(registration.showNotification(title, notificationOptions));
+});
+
+// Bugged -- Does not work --- does same as above ---
 // firebase.messaging().onBackgroundMessage((payload) => {
 //   console.log(
 //     "[firebase-messaging-sw.js] Received background message ",
@@ -34,19 +58,3 @@ firebase.initializeApp(firebaseConfig);
 //     notificationOptions
 //   );
 // });
-
-self.addEventListener("push", function (event) {
-  console.log(
-    "[firebase-messaging-sw.js] Received background message ",
-    event.data.json()
-  );
-  const push = event.data.json().notification;
-  const title = push.title;
-  const notificationOptions = {
-    body: push.body,
-    icon:
-      push.icon ??
-      "https://www.gstatic.com/devrel-devsite/prod/v4c72fb03a7a581549fb317877b3b0627265bda97bd9ba2a29365d1ada8a00354/firebase/images/favicon.png",
-  };
-  event.waitUntil(registration.showNotification(title, notificationOptions));
-});
